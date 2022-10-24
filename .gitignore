@@ -1,0 +1,5 @@
+*.pyc
+data/
+lightning_logs/
+lightning_logs_/
+lightning_logs__/
