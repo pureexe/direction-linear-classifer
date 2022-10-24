@@ -13,7 +13,7 @@ def main():
     lr_monitor = LearningRateMonitor(logging_interval='step')
     train_dataset = AnimalDataset("train")
     val_dataset = AnimalDataset("test")
-    train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, num_workers=16)
+    train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, num_workers=16, shuffle=True)
     val_loader = DataLoader(val_dataset, batch_size=BATCH_SIZE, num_workers=16)
     
     model = LinearClassifer(in_features=train_dataset.NUM_LATENT, out_features=train_dataset.NUM_CLASS)
